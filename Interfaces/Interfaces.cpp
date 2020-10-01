@@ -15,16 +15,23 @@ public:
     Mitarbeiter(string name) {
         this->name = name;
     }
-    inline string getName() { return this->name; }
+    string getName() { return this->name; }
+    virtual void setName(string name) { this->name = name; }
 };
 
 class Chef : public Mitarbeiter {
 protected:
     double boni;
+public:
+    string toString() { return name; }
 };
 
 int main()
 {
-    Mitarbeiter mObj("Rudi");
-    cout << mObj.getName() << endl;    
+    Mitarbeiter mObj("Susi");
+    cout << mObj.getName() << endl;   
+
+    Chef c1;
+    c1.setName("Max");
+    cout << c1.toString() << endl;
 }
