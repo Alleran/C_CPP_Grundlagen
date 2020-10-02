@@ -21,7 +21,7 @@ public:
 
 class Chef : public Mitarbeiter {
 protected:
-    double boni;
+    double boni = 0.25;
 public:
     string toString() { return name; }
 };
